@@ -1,0 +1,52 @@
+# Rotation of arrays is done using Reversal Algorithm                                                         
+                                                            
+                                                            
+                                                            LEFT ROTATION OF ARRAY BY D STEPS 
+
+void reverse(int arr[], int low, int high )
+      {
+          int temp;
+          while(low<high)
+          {
+              temp=arr[low];
+              arr[low]=arr[high];
+              arr[high]=temp;
+              low++;
+              high--;
+          }
+      }
+    void rotateArr(int arr[], int d, int n)
+    {
+      
+          reverse(arr,0,d-1);
+          reverse(arr,d,n-1);
+          reverse(arr,0,n-1);
+      }
+      
+      
+                                                              RIGHT ROTATION OF ARRAY BY D STEPS 
+                                                              
+      
+      void reverse(int arr[], int low, int high )
+      {
+          int temp;
+          while(low<high)
+          {
+              temp=arr[low];
+              arr[low]=arr[high];
+              arr[high]=temp;
+              low++;
+              high--;
+          }
+      }
+    void rotateArr(int arr[], int d, int n)
+    {
+    
+          reverse(arr,0,n-1);
+          reverse(arr,0,d-1);
+          reverse(arr,d,n-1);
+         
+      }
+      
+    
+           
