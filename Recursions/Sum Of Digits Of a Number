@@ -1,0 +1,10 @@
+#You are given a number n. You need to find the sum of digits of n.
+#Using Recursion
+
+int sumOfDigits(int n)
+{
+    if(n==0)
+    return;
+    
+    return n%10+sumOfDigits(n/10);
+}
