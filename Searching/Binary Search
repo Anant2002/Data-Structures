@@ -1,0 +1,41 @@
+#  Binary Search (iterative method)
+
+int bsearch(int arr[], int n, int x)
+{
+  int low = 0 , high =n-1;
+  while(low<=high)
+  {
+  int mid=(low+high)/2;
+  if(arr[mid]==x)
+  {
+  return mid;
+  }
+  else if(arr[mid]>x)
+    high = mid-1;
+       else
+       low=mid+1;
+  }
+
+}
+
+
+# Binary Method (Recursive method)
+
+int bsearch(int arr[], int low, int high, int x)
+{
+  int low = 0 , high =n-1;
+  
+  int mid=(low+high)/2;
+  if(arr[mid]==x)
+  {
+  return mid;
+  }
+  if(arr[mid]<x)
+  {
+  return bsearch(arr[], mid+1, high, x)
+  }
+  if(arr[mid]>x)
+  {
+  return bsearch(arr[], low, mid-1, x)
+  }
+}
