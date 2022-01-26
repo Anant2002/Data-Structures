@@ -1,0 +1,23 @@
+#Given an integer x, find the square root of x. If x is not a perfect square, then return floor(√x).
+
+long long int floorSqrt(long long int x) 
+    {
+    int low=1, high=x/2;
+    
+    while(low<=high)
+    {
+        long long int mid= (low+high)/2;
+        
+        if((mid*mid==x)|| (mid*mid<x && (mid+1)*(mid+1)>x))
+        return mid;
+        else
+          if(mid*mid<x)
+          {
+              low=mid+1;
+          }
+          else
+          {
+              high=mid-1;
+          }
+    }
+    
