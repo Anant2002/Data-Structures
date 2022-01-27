@@ -1,0 +1,43 @@
+# Naive Solution of Selection Sort
+
+void selectionSort(int arr[], int n){
+    
+    int temp[n];
+    for(int i = 0; i < n; i++){
+        int min_ind = 0;
+        
+        for(int j = 0; j < n; j++){
+            if(arr[j] < arr[min_ind]){
+                min_ind = j;
+            }
+          }
+        
+        temp[i]=arr[min_ele];
+        arr[min_ele]=INF;
+    }
+    for(int i=0;i<n;i++)
+     arr[i]=temp[i];
+}
+
+# Efficient Approach of Selection Sort
+
+void selectionSort(int arr[], int n){
+    
+   
+    for(int i = 0; i < n; i++){
+        int min_ind = i;
+        
+        for(int j = 0; j < n; j++){
+            if(arr[j] < arr[min_ind]){
+                min_ind = j;
+                }
+          swap(arr[min_ind],arr[i]);
+          }
+    }
+   
+}
+
+# Time Complexity of Selection Sort= O(n*2)
+
+
+
