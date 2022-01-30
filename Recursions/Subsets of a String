@@ -1,0 +1,13 @@
+Void subsets(string s, string curr=” ”, int i=0)
+{
+  If(i==s.length())
+   { 
+      Cout<<curr;
+      Return;
+    }
+ 
+Subsets(s, curr, i+1);
+Subsets (s, curr+s[i],i+1);
+} 
+
+
