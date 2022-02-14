@@ -1,0 +1,56 @@
+
+#Implemenation in C++
+struct{
+    int data;
+    Node *next;
+    Node(int x)
+    {
+    data=x;
+    next=NULL;
+    }
+};
+
+int main()
+{
+   Node *head = new Node(10);
+   head-->next= new Node(20);
+   head-->next-->next = new Node(30);
+   printlist(head);
+}
+
+int printlist( Node *head)
+{
+     if(head==NULL)
+     return;
+     cout<<curr-->data;
+     return printlist(head-->next);
+}
+
+
+#Implemenation in Java
+class{
+    int data;
+    Node next;
+    Node(int x)
+    {
+    data=x;
+    next=NULL;
+    }
+}
+
+int main()
+{
+   Node head = new Node(10);
+   head.next=new Node(20);
+   head.next.next=new Node(30);
+   printlist(head);
+}
+
+int printlist( Node head)
+{
+     
+     if(head==NULL)
+     return;
+     System.out.print(curr.data);
+     return printlist(head.next);
+}
