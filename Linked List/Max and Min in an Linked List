@@ -1,0 +1,34 @@
+class Get
+{
+    static int maximum(Node head)
+    {
+        Node curr=head;
+        int max=curr.data;
+       if (head == null) return 0;
+       if (head.next == null) return head.data;
+        while(curr!=null)
+        {
+            if(curr.data>max)
+            max=curr.data;
+            
+            curr=curr.next;
+        }
+        return max;
+    }
+
+    static int minimum(Node head)
+    {
+        Node curr=head;
+        int min=curr.data;
+       if (head == null) return 0;
+       if (head.next == null) return head.data;
+        while(curr!=null)
+        {
+            if(curr.data<min)
+            min=curr.data;
+            
+            curr=curr.next;
+        }
+        return min;
+    }
+}
