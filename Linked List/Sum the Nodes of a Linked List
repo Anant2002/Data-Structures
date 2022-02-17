@@ -1,0 +1,14 @@
+class Get
+{
+    public static int sumOfElements(Node head)
+    {
+        Node curr=head;
+        int sum=0;
+        while(curr!=null)
+        {
+            sum=sum+curr.data;
+            curr=curr.next;
+        }
+        return sum;
+    }
+}
