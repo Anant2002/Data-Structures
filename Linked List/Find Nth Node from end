@@ -1,0 +1,56 @@
+class Test
+{
+    //Function to find the data of nth node from the end of a linked list.
+    int getNthFromLast(Node head, int n)
+    {
+    	Node curr=head;
+    	int len=0;
+    	while(curr!=null)
+    	{
+    	    len++;
+    	    curr=curr.next;
+    	}
+    	
+    	if(len<n)
+    	return -1;
+    	
+    	curr=head;
+    	for(int i=1;i<len-n+1;i++)
+    	{
+    	    curr=curr.next;
+    	}
+    	
+    	return (curr.data);
+    	
+    }
+}
+
+
+#Method 2
+
+class Test
+{
+    //Function to find the data of nth node from the end of a linked list.
+    int getNthFromLast(Node head, int n)
+    {
+        if(head==null)
+        return -1;
+        
+        Node fast=head;
+        for(int i=0;i<n;i++)
+         {
+            fast=fast.next;
+          }
+        Node second=head;
+        while(fast!=null)
+        {
+            second=second.next;
+            fast=fast.next;
+        }
+        return second.data;
+        
+        
+    }
+    
+}
+
