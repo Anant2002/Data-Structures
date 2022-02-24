@@ -1,0 +1,14 @@
+class Get
+{
+    public static ArrayList<Integer> displayList(Node head)
+    {
+        Node curr=head;
+        ArrayList<Integer> arr= new ArrayList<Integer>();
+        while(curr!=null)
+        {
+            arr.add(curr.data);
+            curr=curr.next;
+        }
+        return arr;
+    }
+}
