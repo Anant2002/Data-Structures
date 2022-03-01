@@ -1,3 +1,3 @@
 # Data-Structures
 
-This repository is about Data Structures
+This repository includes questions of Data Structures 
