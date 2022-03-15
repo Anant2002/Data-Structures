@@ -1,0 +1,41 @@
+Naive Approach
+
+Node InsertAtBegin(Node head, int x)
+{
+    Node temp= new Node(x);
+   if (head==null)
+    {
+     temp.next=temp;
+     return temp;
+    }
+
+    Node curr=head;
+    while( curr.next==head)
+       {
+         curr=curr.next;
+        }
+
+curr.next= temp;
+temp.next=head;
+return temp;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Efficient Approach 
+
+Node InsertAtBegin(Node head, int x)
+{
+    Node temp= new Node(x);
+     if(head==null)
+      {
+              temp.next=temp;
+              return temp;
+       }
+
+    temp.next= head.next;
+     head.next= temp;
+      int t = head.data;
+      head.data= temp.data;
+      temp.data= t;
+       return head; 
+}
