@@ -24,7 +24,7 @@ void reverse(int arr[], int low, int high )
       }
       
       
-                                                              RIGHT ROTATION OF ARRAY BY D STEPS 
+                                                               RIGHT ROTATION OF ARRAY BY D STEPS 
                                                               
       
       void reverse(int arr[], int low, int high )
