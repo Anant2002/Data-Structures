@@ -1,0 +1,20 @@
+ vector<int> rightView(Node *root)
+      {
+          vector<int> v;
+          int i=0;
+          right(root,i,v);
+          return v;
+      }
+     void right(Node *node, int level, vector<int> &v)
+        {
+          
+            if(node==NULL)
+                return ;
+            
+            if(level==v.size())
+                v.push_back(node->data);
+                right(node->right, level+1,v);
+             right(node->left, level+1,v);
+         
+           
+        }
