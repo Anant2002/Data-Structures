@@ -1,0 +1,12 @@
+ int maxProfit(vector<int>& prices) {
+        int maxdif=0;
+        int mindif=prices[0];
+        
+        for(int i=1;i<prices.size();i++)
+        {
+            maxdif= max(maxdif, prices[i]-mindif);
+            mindif= min(prices[i],mindif);
+        }
+        return maxdif;
+        
+    }
