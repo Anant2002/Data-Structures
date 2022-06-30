@@ -1,0 +1,15 @@
+Recursive Approach:
+-------------------
+Node* insert(Node* root, int Key) {
+    
+    if(root==NULL )
+     return new Node(Key);
+     
+    else if(root->data<Key && root->data!=Key )
+      root->right=insert(root->right,Key);
+      
+     if(root->data>Key && root->data!=Key )
+     root->left=insert(root->left,Key);
+     
+    return root;
+}
