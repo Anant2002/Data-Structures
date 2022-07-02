@@ -1,0 +1,25 @@
+Ceiling of a BST refers to the closest minimum value to the key and just greater than that.
+
+     50 
+    /   \
+   30    70
+  /  \   / \
+20   35  55  72
+
+I/p: 58
+O/p: 70
+-----------------------------------------
+Node *ceil(Node *root, int x){
+    Node *res=NULL;
+    while(root!=NULL){
+        if(root->key==x)
+            return root;
+        else if(root->key<x)
+            root=root->right;
+        else{
+            res=root;
+            root=root->left;
+        }
+    }
+    return res;
+} 
