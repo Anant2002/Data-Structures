@@ -6,3 +6,10 @@ Public class test{
        System.out.println("Hello World");
            }
 }
+
+
+
+--------------------------------\\
+
+
+cout<<"Hello World";
