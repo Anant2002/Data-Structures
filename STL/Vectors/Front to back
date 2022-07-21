@@ -1,0 +1,14 @@
+You are given a vector V of size n. You need to print its elements.Just complete the function iter() that takes two iterators as parameters, i.e., 
+starting and ending iterators. In a new line, print the required output.
+
+void iter(vector<int>::iterator it1,vector<int>::iterator it2)
+{
+    //Your code here. Use iterator to print all the elements
+    for (auto it=it1;it!=it2;it++)
+    {
+        cout<<*it<<" ";
+    }
+    cout<<endl;
+}
+
+
