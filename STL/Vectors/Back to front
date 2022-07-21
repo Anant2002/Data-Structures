@@ -1,0 +1,18 @@
+Given a vector of N positive integers. Your task is to print the vector elements in reverse order.
+
+
+/*Function to print vector in reverse order
+* using iterator
+* it1 : v.rbegin(), reverse iterator
+* it2 : v.rend(), reverse iterator
+*/
+void reverseIterator(vector<int>::reverse_iterator it1, vector<int>::reverse_iterator it2){
+    
+    // Your code here
+    for(auto it= it1; it!=it2;it++)
+    {
+        cout<<*it<<" ";
+    }
+    cout<<endl;
+    
+}
