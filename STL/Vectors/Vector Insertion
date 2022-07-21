@@ -1,0 +1,11 @@
+ Given an array arr[] of size N containing integers. The task is to insert elements of given array to vector and return that vector.
+ 
+ vector<int> fillVector(int arr[], int n)
+{
+    vector<int> v;
+    for(int i=0;i<=n-1;i++)
+    {
+        v.push_back(arr[i]);
+    }
+    return v;
+}
