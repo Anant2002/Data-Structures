@@ -1,0 +1,15 @@
+vector<int> maximum_from_left(vector<int>v)
+{
+    vector<int>res;
+    int max= v[0];
+    
+    for(int i=1;i<v.size();i++)
+    {
+        if(max<v[i])
+         {
+             res.push_back(i);
+             max= v[i];
+         }
+    }
+    return res;
+}
